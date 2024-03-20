@@ -12,4 +12,13 @@ fn main() {
     if choice == 1 {
         println!("Вы выбрали прямоугольник"); 
     }
+    if choice == 2 {
+        println!("Вы выбрали треугольник"); 
+    }
+    if choice == 3 {
+        println!("Вы выбрали трапецию"); 
+    }
+    if choice == 4 {
+        println!("Вы выбрали окружность"); 
+    }
 }
