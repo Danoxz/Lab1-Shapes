@@ -1,5 +1,7 @@
-use text_io::read;
 mod circle;
+mod trapezium;
+
+use text_io::read;
 fn main() {
     println!("Выберите фигуру:");
     println!("1. Прямоугольник");
@@ -16,7 +18,7 @@ fn main() {
         println!("Вы выбрали треугольник"); 
     }
     if choice == 3 {
-        println!("Вы выбрали трапецию"); 
+        trapezium::process_trapezium();
     }
     if choice == 4 {
         circle::process_circle();
