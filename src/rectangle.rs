@@ -7,7 +7,9 @@ pub fn process_rectangle() {
 
     let perimeter: f64 = 2.0 * (length + width);
     let area: f64 = length * width;
+    let diagonal: f64 = (length.powi(2) + width.powi(2)).sqrt();
 
     println!("Периметр: {}", perimeter);
     println!("Площадь: {}", area);
+    println!("Длина диагонали: {}", diagonal);
 }
