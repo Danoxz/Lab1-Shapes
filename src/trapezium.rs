@@ -7,8 +7,10 @@ pub fn process_trapezium() {
     let side: f64 = read!();
 
     let perimeter: f64 = base1 + base2 + side * 2.0;
+    let height: f64 = (side.powi(2) - ((base1 - base2) / 2.0).abs().powi(2)).sqrt();
 
-
+    let area = 0.5 * (base1 + base2) * height;
 
     println!("Периметр: {}", perimeter);
+    println!("Площадь: {}", area);
 }
