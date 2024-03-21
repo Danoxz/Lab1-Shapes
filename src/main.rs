@@ -1,5 +1,6 @@
 mod circle;
 mod trapezium;
+mod rectangle;
 
 use text_io::read;
 fn main() {
@@ -12,7 +13,7 @@ fn main() {
     let choice: u8 = read!();
 
     if choice == 1 {
-        println!("Вы выбрали прямоугольник"); 
+        rectangle::process_rectangle(); 
     }
     if choice == 2 {
         println!("Вы выбрали треугольник"); 
