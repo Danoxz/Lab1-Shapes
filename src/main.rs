@@ -19,6 +19,6 @@ fn main() {
         println!("Вы выбрали трапецию"); 
     }
     if choice == 4 {
-        println!("Вы выбрали окружность"); 
+        circle::process_circle();
     }
 }
