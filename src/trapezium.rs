@@ -6,6 +6,11 @@ pub fn process_trapezium() {
     let base2: f64 = read!();
     let side: f64 = read!();
 
+    if side * 2.0 <= (base1 - base2).abs() {
+        println!("Это не трапеция!");
+        return;
+    }
+
     let perimeter: f64 = base1 + base2 + side * 2.0;
     let midline: f64 = (base1 - base2).abs() / 2.0;
     let height: f64 = (side.powi(2) - midline.powi(2)).sqrt();
