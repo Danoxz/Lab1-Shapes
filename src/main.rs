@@ -1,5 +1,5 @@
 use text_io::read;
-
+mod circle;
 fn main() {
     println!("Выберите фигуру:");
     println!("1. Прямоугольник");
