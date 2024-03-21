@@ -6,5 +6,8 @@ pub fn process_rectangle() {
     let width: f64 = read!();
 
     let perimeter: f64 = 2.0 * (length + width);
+    let area: f64 = length * width;
+
     println!("Периметр: {}", perimeter);
+    println!("Площадь: {}", area);
 }
