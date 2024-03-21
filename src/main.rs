@@ -6,9 +6,8 @@ use text_io::read;
 fn main() {
     println!("Выберите фигуру:");
     println!("1. Прямоугольник");
-    println!("2. Треугольник");
-    println!("3. Трапеция");
-    println!("4. Окружность");
+    println!("2. Трапеция");
+    println!("3. Окружность");
 
     let choice: u8 = read!();
 
@@ -16,12 +15,9 @@ fn main() {
         rectangle::process_rectangle(); 
     }
     if choice == 2 {
-        println!("Вы выбрали треугольник"); 
-    }
-    if choice == 3 {
         trapezium::process_trapezium();
     }
-    if choice == 4 {
+    if choice == 3 {
         circle::process_circle();
     }
 }
