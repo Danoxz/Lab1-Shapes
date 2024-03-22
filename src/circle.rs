@@ -6,12 +6,15 @@ pub fn process_circle() {
     let radius: f64 = read!();
     println!("Введите угол сектора (в градусах):");
     let angle: f64 = read!();
+    if angle < 0.0 || radius < 0.0 {
+        println!("Некорректно введены данные");
+    } else {
+        let circumference: f64 = 2.0 * PI * radius;
+        let area: f64 = PI * radius.powi(2);
+        let sector_area = PI * radius.powi(2) * (angle / 360.0);
 
-    let circumference: f64 = 2.0 * PI * radius;
-    let area: f64 = PI * radius.powi(2);
-    let sector_area = PI * radius.powi(2) * (angle / 360.0);
-
-    println!("Длина окружности: {}", circumference);
-    println!("Площадь круга: {}", area);
-    println!("Площадь сектора: {}", sector_area);
+        println!("Длина окружности: {}", circumference);
+        println!("Площадь круга: {}", area);
+        println!("Площадь сектора: {}", sector_area);
+    }
 }
