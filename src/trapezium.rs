@@ -1,23 +1,19 @@
 use text_io::read;
 
 pub fn process_trapezium() {
-    println!("Введите длины оснований и боковой стороны трапеции:");
+    println!("Введите длины оснований и боковоых сторон трапеции:");
     let base1: f64 = read!();
     let base2: f64 = read!();
-    let side: f64 = read!();
+    let side1: f64 = read!();
+    let side2: f64 = read!();
 
-    if side * 2.0 <= (base1 - base2).abs() {
-        println!("Это не трапеция!");
-        return;
-    }
+    let perimeter: f64 = base1 + base2 + side1 + side2;
+    let midline: f64 = (base1 + base2) / 2.0;
+    let height: f64 = (side1.powi(2) - (((base1 - base2).powi(2) + side1.powi(2) - side2.powi(2)) / (2.0 * (base1 - base2))).powi(2)).sqrt();
 
-    let perimeter: f64 = base1 + base2 + side * 2.0;
-    let midline: f64 = (base1 - base2).abs() / 2.0;
-    let height: f64 = (side.powi(2) - midline.powi(2)).sqrt();
-
-    let area: f64 = 0.5 * (base1 + base2) * height;
+    let area: f64 = midline * height;
 
     println!("Периметр: {}", perimeter);
     println!("Площадь: {}", area);
-    println!("Средняя линия: {}", midline);
+    println!("Средняя линия: {}",midline);
 }
