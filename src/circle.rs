@@ -9,7 +9,7 @@ pub fn process_circle() {
 
     let circumference: f64 = 2.0 * PI * radius;
     let area: f64 = PI * radius.powi(2);
-    let sector_area = PI * radius.powi(2) * (angle / 360.0);
+    let sector_area: f64 = PI * radius.powi(2) * (angle / 360.0);
 
     println!("Длина окружности: {}", circumference);
     println!("Площадь круга: {}", area);
